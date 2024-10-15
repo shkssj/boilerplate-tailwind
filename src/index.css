@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #0070f3;
+  --color-secondary: #ff0080;
+  --color-accent: #333;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: none !important;
+  overflow: hidden !important;
+  user-select: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.transition-fade-enter {
+  opacity: 0;
+}
+.transition-fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.transition-fade-exit {
+  opacity: 1;
+}
+.transition-fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.transition-slide-enter {
+  transform: translateX(-100%);
+}
+.transition-slide-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms;
+}
+.transition-slide-exit {
+  transform: translateX(0);
+}
+.transition-slide-exit-active {
+  transform: translateX(-100%);
+  transition: transform 500ms;
+}
